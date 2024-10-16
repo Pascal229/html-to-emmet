@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    image: nginx:stable-alpine-slim
+    ports:
+      - "${PORT}:80"
+    networks:
+      - backend
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./src:/app
+    depends_on:
+      - php
+  php:
+    build: './'
+    platform: linux/amd64
+    networks:
+      - backend
+    volumes:
+      - ./src:/app
+
+networks:
+  backend:

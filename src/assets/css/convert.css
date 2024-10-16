@@ -1,0 +1,223 @@
+body {
+   font-family: "Consolas", "Arial", "Helvetica", "Calibri", sans-serif;
+   transition: all 0.5s;
+   margin: 20px;
+   display: flex;
+   flex-flow: column;
+   position: relative;
+}
+
+.dark {
+   background-color: rgb(44, 44, 44);
+   color: white;
+}
+
+.light {
+   background-color: rgb(228, 228, 228);
+   color: black;
+}
+
+.flash-container {
+   position: absolute;
+   width: 100%;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   height: 40px;
+   display: none;
+}
+
+.flash-bar-container {
+}
+
+.flash-bar {
+   width: 400px;
+   overflow: hidden;
+   bottom: 0;
+   height: 5px;
+   position: absolute;
+   z-index: 5;
+   background-color: rgb(54, 122, 70);
+   transition: background-color 0.2s;
+}
+
+.flash-center {
+   overflow: hidden;
+   width: 400px;
+   height: 100%;
+   background-color: rgba(82, 184, 106, 0.7);
+   /* border-radius: 15px; */
+   display: flex;
+   transition: background-color 0.2s;
+}
+
+.flash-center:hover {
+   background-color: rgba(82, 184, 106, 1);
+}
+
+/* success */
+.flash-bar-success {
+   background-color: rgb(54, 122, 70) !important;
+}
+
+.flash-center-success {
+   background-color: rgba(82, 184, 106, 0.7) !important;
+}
+
+.flash-center-success:hover {
+   background-color: rgba(82, 184, 106, 0.9) !important;
+}
+
+/* error */
+
+.flash-bar-error {
+   background-color: rgb(139, 8, 8) !important;
+}
+
+.flash-center-error {
+   background-color: rgba(211, 7, 7, 0.7) !important;
+}
+
+.flash-center-error:hover {
+   background-color: rgba(211, 7, 7, 0.9) !important;
+}
+
+
+.flash-message {
+   flex: 1;
+   padding: 8px 10px 10px 10px;
+}
+
+.flash-cancel {
+   display: flex;
+   /* align-items: center; */
+   padding: 10px 10px 0 0;
+   cursor: pointer;
+}
+
+
+.center-content {
+   z-index: 2;
+   display: flex;
+   justify-content: center;
+}
+
+.content {
+   max-width: 1000px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   flex-flow: column;
+}
+
+img {
+   cursor: pointer;
+}
+
+.form {
+   display: flex;
+   flex-flow: column;
+   position: relative;
+   overflow: hidden;
+}
+textarea {
+   margin-top: 50px;
+   padding: 20px;
+   outline: none;
+   height: 500px;
+   resize: vertical;
+   overflow-y: scroll;
+   max-height: 500px;
+   height: 58px;
+   min-height: 58px;
+   color: white;
+   transition: min-height 0.2s;
+   border: 2px solid #6e6e6e;
+   background-color: transparent;
+}
+textarea:focus {
+   min-height: 200px;
+}
+
+.submit {
+   margin-top: 30px;
+   height: 50px;
+   width: 100%;
+   font-size: 20px;
+   font-weight: bold;
+   background-color: #c7c7c7;
+   border: none;
+   cursor: pointer;
+   color: black;
+   transition: background-color 0.2s;
+}
+
+.submit:focus-visible {
+   outline: none;
+}
+
+.loading-Progress {
+   height: 2px;
+   width: 100%;
+   position: absolute;
+   background-color: rgb(133, 133, 133);
+   bottom: 0px;
+}
+
+.loading-hidden {
+   opacity: 0%;
+   width: 0px;
+   transition: opacity 1s, width 0s 1s;
+}
+
+.loading-error {
+   background-color: rgba(255, 0, 0, 0.616);
+}
+
+.loading-show {
+   opacity: 100%;
+}
+
+.submit:hover {
+   background-color: rgb(222, 222, 222);
+}
+
+.title {
+   text-align: center;
+   margin-top: 10%;
+   font-size: 40px;
+}
+
+.output {
+   margin-top: 30px;
+   padding: 20px;
+   cursor: pointer;
+   max-height: 100px;
+   /* color: #c7c7c7; */
+}
+
+.output-filled {
+   border: 2px solid #6e6e6e;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+
+header {
+   height: 50px;
+   display: flex;
+   width: 100%;
+}
+
+.right {
+   flex: 1;
+   display: flex;
+   justify-content: right;
+}
+.appereance-change {
+   border-radius: 50%;
+   height: 30px;
+   width: 30px;
+   transition: all 0.5s;
+   border: 0;
+   z-index: 10;
+}
